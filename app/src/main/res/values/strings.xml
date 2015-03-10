@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LearningApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_submission_form">SubmissionFormActivity</string>
+    <string name="title_activity_submision_form">SubmisionFormActivity</string>
+    <string name="title_activity_places">PlacesActivity</string>
+    <string name="title_activity_thank_you">ThankYouActivity</string>
+    <string name="Classroom">Classroom</string>
+    <string name="Building">Building</string>
+    <string name="Title">Title</string>
+    <string name="Username">Username</string>
+    <string name="Additional_Information">Additional Information</string>
+
+</resources>
