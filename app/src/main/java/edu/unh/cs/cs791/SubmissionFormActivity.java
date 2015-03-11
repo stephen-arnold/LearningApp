@@ -3,13 +3,31 @@ package edu.unh.cs.cs791;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
 
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
+
 
 @EActivity
 public class SubmissionFormActivity extends Activity {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
+
+    @ViewById
+    TextView txtClassroom;
+
+    @ViewById
+    TextView txtBuilding;
+
+
+    @ViewById
+    Button btnSubmit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +50,20 @@ public class SubmissionFormActivity extends Activity {
 
     }
 
+    public void updateDB() {
+
+        String classroom = txtClassroom.getText().toString();
+        String building = txtBuilding.getText().toString();
+
+        Log.v(TAG, classroom);
+        Log.v(TAG, building);
+
+
+        ObserveDB entry = new ObserveDB(this);
+        entry.open();
+        entry.createEntry(classroom, building);
+        entry.close();
+    }
 
     @Background
     public void places()
@@ -42,9 +74,8 @@ public class SubmissionFormActivity extends Activity {
 
 
     @Click(R.id.btnSubmit)
-    public void submitClicked(){ places(); }
-
-
-
-
+    public void submitClicked(){
+        updateDB();
+        places();
+      }
 }

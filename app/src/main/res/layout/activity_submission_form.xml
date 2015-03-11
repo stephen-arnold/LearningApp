@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Submission Form"
-        android:id="@+id/textView"
+        android:id="@+id/txtClassroomUpdate"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textColor="@color/front_banner_text"
@@ -45,7 +45,7 @@
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:id="@+id/txtClassroom"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/txtClassroomUpdate"
         android:layout_marginTop="45dp"
         android:layout_marginBottom="5dp"
         android:layout_marginRight="10dp"
@@ -81,49 +81,36 @@
         android:layout_alignLeft="@+id/space"
         android:layout_alignStart="@+id/space" />
 
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:id="@+id/txtTitle"
-        android:backgroundTint="#ffffffff"
-        android:backgroundTintMode="screen"
-
-        android:layout_below="@+id/txtClassroom"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="@string/Title" />
-
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Yes or No Question?"
-        android:id="@+id/radioButton"
+        android:id="@+id/radYesOrNo"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/txtTitle"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#ff010101"
+        android:layout_below="@+id/txtClassroom"
+        android:checked="false" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/txtAdditionalInfo"
         android:backgroundTint="#ffffffff"
         android:backgroundTintMode="screen"
-        android:layout_below="@+id/radioButton"
+        android:hint="@string/Additional_Information"
+        android:layout_below="@+id/radYesOrNo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="49dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:hint="@string/Additional_Information" />
+        android:layout_alignRight="@+id/txtBuilding"
+        android:layout_alignEnd="@+id/txtBuilding" />
 
     <Space
         android:layout_width="20px"
         android:layout_height="20px"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/txtAdditionalInfo"
         android:layout_centerHorizontal="true"
         android:id="@+id/space" />
 
